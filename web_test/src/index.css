@@ -1,0 +1,54 @@
+/* src/index.css */
+:root {
+  /* --- 核心色盤 (依據你的提示詞) --- */
+  --bg-main: #0B0F1A;       /* 深黑藍 */
+  --bg-section: #111827;    /* 深灰藍 */
+  --bg-card: rgba(31, 41, 55, 0.7); /* 石墨灰 (帶透明度用於毛玻璃) */
+  
+  --accent-blue: #38BDF8;   /* 電子藍 */
+  --accent-cyan: #22D3EE;   /* 晶片藍綠 */
+  --accent-purple: #8B5CF6; /* 霓虹紫 */
+  
+  --status-green: #4ADE80;
+  --status-orange: #F59E0B;
+  --status-red: #F43F5E;
+
+  --text-main: #E5E7EB;     /* 主文字 */
+  --text-sub: #9CA3AF;      /* 次文字 */
+  --text-dim: #6B7280;      /* 淡化文字 */
+
+  /* --- 字體設定 --- */
+  --font-heading: 'Space Grotesk', 'Noto Sans TC', sans-serif;
+  --font-body: 'Inter', 'Noto Sans TC', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  
+  /* --- 背景特效：科技網格 (Grid) --- */
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px; /* 網格大小 */
+  min-height: 100vh;
+}
+
+/* 捲軸美化 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}
