@@ -29,46 +29,71 @@ function Home() {
 
         {/* 簡短介紹 */}
         <div style={{ textAlign: 'left' }}>
-          <h2>個人簡介</h2>
+          <h2>關於我</h2>
           <p>
-            我是台北大學電機工程學系的學生。 
-            我對半導體產業充滿熱情，想往這個領域發展~~
-            這個網頁是大一上對於未來各種幻想的小記錄。
+            你好！我是台北大學電機工程學系的學生。 
+            我對半導體產業充滿熱情，專注於數位電路設計與計算機架構。 
           </p>
         </div>
 
-        {/* 🔥 新增：職涯動機區塊 (Highlight Section) */}
+        {/* 職涯動機區塊 */}
         <div style={{ 
           marginTop: '2rem', 
           padding: '1.5rem', 
-          background: 'rgba(56, 189, 248, 0.05)', // 淡藍色背景
-          borderLeft: '4px solid var(--accent-cyan)', // 左側亮線
+          background: 'rgba(56, 189, 248, 0.05)', 
+          borderLeft: '4px solid var(--accent-cyan)',
           borderRadius: '0 8px 8px 0',
           textAlign: 'left'
         }}>
            <h3 style={{ color: 'var(--accent-cyan)', marginTop: 0, fontSize: '1.25rem' }}>
-              職涯動機：從 AI 浪潮看見晶片價值
+             🌟 職涯動機：從 AI 浪潮看見晶片價值
            </h3>
-           
-           
-
            <p style={{ lineHeight: '1.8', color: 'var(--text-main)' }}>
              在人工智慧逐漸成為產業核心的時代，運算需求的提升也帶動了對<strong>高效能晶片</strong>的高度依賴。
-             無論是 AI 模型訓練、資料處理，或是未來智慧裝置的發展，背後都離不開穩定且高效的 IC 設計。
-           </p>
-           <p style={{ lineHeight: '1.8', color: 'var(--text-sub)' }}>
-             雖然目前我僅修習過 C 語言、計算機概論與微積分等基礎課程，但這些學習讓我開始理解軟體運作與硬體效能之間的關係，
-             也促使我進一步關注晶片如何在底層支撐整個系統的運行。
-           </p>
-           <p style={{ lineHeight: '1.8', color: 'var(--text-main)', fontWeight: 'bold' }}>
-             面對 AI 主宰的未來，我希望不只是使用科技，而能參與其核心建構，
-             透過持續累積電機與數位電路相關能力，逐步朝 IC 設計方向發展，跟上這股時代潮流。
+             面對 AI 主宰的未來，我希望不只是使用科技，而能參與其核心建構，逐步朝 IC 設計方向發展。
            </p>
         </div>
 
       </div>
 
-      {/* 2. 雙欄佈局 */}
+      {/* 🔥 新增區塊：AI 在 IC 設計中的應用 (AI for Chip Design) */}
+      <div className="card" style={{ border: '1px solid rgba(139, 92, 246, 0.3)', background: 'linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, rgba(0,0,0,0) 100%)' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '0.5rem' }}>🤖 AI 賦能：未來 IC 設計師的助手</h2>
+        <p style={{ textAlign: 'center', color: 'var(--text-sub)', marginBottom: '2rem' }}>
+            不只是「設計 AI 晶片」，更要懂得「用 AI 工具設計晶片」 (AI for EDA)。
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+            {/* 特點 1 */}
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '8px' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚡</div>
+                <h3 style={{ color: 'var(--accent-cyan)', fontSize: '1.1rem', marginTop: 0 }}>加速 PPA 優化</h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
+                    利用機器學習模型輔助 EDA 工具，能更快速預測最佳的<strong>擺放與繞線 (Place & Route)</strong>，在更短時間內達成最佳的功耗 (Power)、效能 (Performance) 與面積 (Area) 平衡。
+                </p>
+            </div>
+
+            {/* 特點 2 */}
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '8px' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🐞</div>
+                <h3 style={{ color: 'var(--accent-purple)', fontSize: '1.1rem', marginTop: 0 }}>智慧驗證 (Smart Verification)</h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
+                    隨著晶片複雜度提升，傳統隨機測試已不足夠。AI 能自動生成更具針對性的測試案例，協助工程師更快抓出隱藏極深的 <strong>Corner Case Bugs</strong>，大幅縮短除錯時間。
+                </p>
+            </div>
+
+            {/* 特點 3 */}
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '8px' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⌨️</div>
+                <h3 style={{ color: 'var(--accent-cyan)', fontSize: '1.1rem', marginTop: 0 }}>RTL 程式碼輔助</h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
+                    透過類似 Copilot 的 AI 助手，協助生成標準化的 <strong>Verilog / SystemVerilog</strong> 模組與 Testbench，讓工程師能從繁瑣的編碼中解放，專注於更高層次的架構設計。
+                </p>
+            </div>
+        </div>
+      </div>
+
+      {/* 2. 雙欄佈局：左邊放修課背景，右邊放未來專題 */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
         
         {/* 左欄：核心修課 */}
