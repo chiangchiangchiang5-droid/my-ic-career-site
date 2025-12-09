@@ -1,16 +1,10 @@
 [build]
-  publish = "dist" # 告訴 Netlify 部署哪個資料夾
+  # 告訴 Netlify 執行打包指令
+  command = "npm run build"
+  # 告訴 Netlify 部署哪個資料夾
+  publish = "dist"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200 # 這是 Netlify 設定路由的標準寫法
-
-
-[build]
-  command = "npm run build" # <-- 新增或確認此行，強制執行打包
-  publish = "dist" # <-- 確認此行，發布 dist 資料夾
-
+# 設定路由：將所有找不到的網址都導向 index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
