@@ -1,7 +1,8 @@
 [build]
-  publish = "dist" # 強制 Netlify 讀取 Vite 打包後的 dist 資料夾
+  command = "npm run build" # <-- 新增或確認此行，強制執行打包
+  publish = "dist" # <-- 確認此行，發布 dist 資料夾
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200 # 確保所有子頁面都能正常導向
+  status = 200
